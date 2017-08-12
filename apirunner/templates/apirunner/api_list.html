@@ -1,0 +1,14 @@
+{% extends 'apirunner/base.html' %}
+
+{% block content %}
+  {% for api in apis %}
+  <div class="card">
+    <div class="card-body">
+      <h8 class="card-title">created: {{ api.created_date }}</h8>
+      <h6 class="card-subtitle mb-2 text-muted">{{ api.api_url }}</h6>
+      <p class="card-text">{{ api.api_description|linebreaksbr }}</p>
+      <a href="#" class="card-link">{{ api.api_method }}</a>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}
